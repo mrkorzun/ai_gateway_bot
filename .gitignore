@@ -1,0 +1,55 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+*.log
+
+# ---- Virtual Environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Byte-compiled / cache ----
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- Jupyter Notebooks ----
+.ipynb_checkpoints
+
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- Environment & Config ----
+.env
+.env.*
+!*.env.example
+
+# ---- Docker ----
+docker/*.pid
+docker/*.log
+docker-compose.override.yml
+
+# ---- Databases ----
+*.db
+*.sqlite3
+pgdata/
+*.sql
+
+# ---- Node (if admin panel uses JS build tools) ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
