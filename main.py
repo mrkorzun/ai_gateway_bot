@@ -5,10 +5,11 @@ from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
 from app.admin import admin
 from app.user import user
-
+from app.database.models import async_main
 
 async def startup(dispatcher: Dispatcher):
     print('Bot starting up...')
+    await async_main()
     
 async def shuttdown(dispatcher: Dispatcher):
     print('Bot shutting down...')
@@ -21,7 +22,6 @@ async def main():
     dp.shutdown.register(shuttdown)
     dp.include_routers(admin, user)
     await dp.start_polling(bot)
-
 
 if __name__ == '__main__':
     try:
